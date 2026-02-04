@@ -1,0 +1,13 @@
+{
+    "navbar":{
+        "about": "sobre mi",
+        "resume": "resumen",
+        "projects": "proyectos",
+        "stats": "estadisticas",
+        "contact": "contactame"
+},
+
+    "description":{
+        
+    }
+}

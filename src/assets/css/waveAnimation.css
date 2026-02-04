@@ -1,0 +1,30 @@
+  .liquid::after {
+    animation: animate 1s linear 2s infinite;
+  }
+  
+  .liquid::before {
+    content: '';
+    width: 450px;
+    height: 420px;
+    background-color: #121c34;
+    z-index: 1;
+    position: absolute;
+    left: -160px;
+
+    border-radius: 50%;
+    animation: animate 5s linear 1.8s infinite;
+  }
+  
+  
+  
+  @keyframes animate {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  
