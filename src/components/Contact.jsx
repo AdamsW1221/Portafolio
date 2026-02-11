@@ -257,12 +257,6 @@ export const Contact = () => {
                   : "Send"}
               </motion.button>
             </form>
-
-            <p className="text-gray-500 mt-3 text-xs">
-              {currentIdiom === "es"
-                ? "El formulario usa EmailJS. El email del visitante queda como Reply-To."
-                : "This form uses EmailJS. Visitor email is used as Reply-To."}
-            </p>
           </div>
         </Reveal>
       </div>
