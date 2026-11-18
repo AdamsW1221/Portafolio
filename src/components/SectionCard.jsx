@@ -35,10 +35,10 @@ export const Section = () => {
   const scrollRef = useRef(null);
 
   return (
-    <div className="px-2 py-2 lg:py-5 md:px-0 pb-20 h-full">
+    <div className="w-full flex-1 min-w-0 px-2 py-2 lg:py-5 md:px-0 pb-20 h-full">
       <div
         ref={scrollRef}
-        className="lg:max-w-[1000px] bg-[#121c34] h-full lg:overflow-y-auto rounded-md lg:rounded-s-none lg:rounded-r-md z-10 relative scroll-color"
+        className="w-full lg:max-w-[1000px] bg-[#121c34] h-full lg:overflow-y-auto rounded-md lg:rounded-s-none lg:rounded-r-md z-10 relative scroll-color"
       >
         <ScrollRootProvider value={scrollRef}>
           <AnimatePresence mode="wait">
@@ -50,7 +50,7 @@ export const Section = () => {
                 animate="animate"
                 exit="exit"
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="min-h-full"
+                className="min-h-full w-full"
               >
                 <Active />
               </motion.div>

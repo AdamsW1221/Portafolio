@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useIdiom } from "../contexts/ChangeIdiom";
 import { supabase } from "../lib/supabaseClient";
+import { KEEPALIVE_NAME } from "../lib/supabaseKeepAlive";
 import { CommentsLoader } from "./UI/CommentsLoader";
 
 import { motion } from "framer-motion";
@@ -60,7 +61,8 @@ export const Comments = () => {
   async function fetchTotal() {
     const { count, error } = await supabase
       .from("portfolio_comments")
-      .select("id", { count: "exact", head: true });
+      .select("id", { count: "exact", head: true })
+      .neq("name", KEEPALIVE_NAME);
 
     if (error) throw error;
     return count ?? 0;
@@ -73,6 +75,7 @@ export const Comments = () => {
     const { data, error } = await supabase
       .from("portfolio_comments")
       .select("id,name,message,created_at")
+      .neq("name", KEEPALIVE_NAME)
       .order("created_at", { ascending: false })
       .range(from, to);
 
@@ -195,7 +198,7 @@ export const Comments = () => {
   }
 
   return (
-    <div className="divide-y divide-gray-800 mt-5">
+    <div className="divide-y divide-gray-800 mt-5 w-full">
       <Reveal className="mb-5 flex items-center justify-center lg:justify-start">
         <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-white to-40% text-3xl font-semibold ml-5">
           {currentIdiom === "es" ? "Comentarios" : "Comments"}

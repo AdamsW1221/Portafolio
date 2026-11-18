@@ -173,8 +173,8 @@ export const Resume = () => {
             <div className="divide-y divide-gray-800">
               <Reveal>
                 <Card className="p-6 mx-3 mb-3">
-                  <div className="border-2 border-indigo-500 text-indigo-500 flex justify-center items-center w-28 italic mb-5">
-                    2024-{currentIdiom === "es" ? "Presente" : "Present"}
+                  <div className="border-2 border-gray-600 text-gray-600 flex justify-center items-center w-44 italic mb-5">
+                    jul 16 - oct 23 (2024)
                   </div>
 
                   <div className="flex italic font-semibold text-white justify-between gap-3">

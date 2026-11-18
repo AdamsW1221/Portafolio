@@ -34,7 +34,7 @@ export const Stats = () => {
   const { currentIdiom } = useIdiom();
 
   return (
-    <div className="divide-y divide-gray-800 mt-5">
+    <div className="divide-y divide-gray-800 mt-5 w-full">
       <Reveal className="mb-5 flex items-center justify-center lg:justify-start">
         <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-white to-40% text-3xl font-semibold ml-5">
           {currentIdiom === "es" ? "Habilidades" : "Skills"}
